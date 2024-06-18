@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Sniffer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Network Sniffer</h1>
+        <form method="post" action="/sniff">
+            <div>
+                <label for="interface">Network Interface:</label>
+                <input type="text" id="interface" name="interface" placeholder="e.g., eth0">
+            </div>
+            <div>
+                <label for="packet_count">Number of Packets to Capture:</label>
+                <input type="number" id="packet_count" name="packet_count" value="10">
+            </div>
+            <button type="submit">Start Sniffing</button>
+        </form>
+    </div>
+</body>
+</html>
